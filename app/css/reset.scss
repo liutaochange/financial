@@ -54,3 +54,7 @@ hr {
     color: red!important;
   }
 }
+// 去除移动端点击高亮
+html{
+    -webkit-tap-highlight-color:rgba(0,0,0,0) 
+}

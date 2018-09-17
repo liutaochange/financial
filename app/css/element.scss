@@ -1,5 +1,6 @@
 @import "./layout.scss";
 
+// 默认按钮模块
 @mixin btn($size:14px,$color:#fff,$bgcolor:#F04752,$padding:5px,$radius:5px) {
   padding: $padding;
   background-color: $bgcolor;
@@ -12,10 +13,12 @@
   display: inline-block;
 }
 
+// 默认列表模块
 @mixin list($direction:column) {
   @include flex($direction);
 }
 
+// 默认面板模块
 @mixin panel($bgcolor:#fff,$padding:0,$margin:20px 0,$height:112px,$txtPadding:0 32px,$color:#333,$fontSize:32px) {
   background: $bgcolor;
   padding: $padding;

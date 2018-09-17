@@ -1,5 +1,6 @@
 @charset "UTF-8";
 
+// 默认方向为column，为block
 @mixin flex($direction:column,$inline:block) {
   display: if($inline==block,flex,inline-flex);
   flex-direction: $direction;
