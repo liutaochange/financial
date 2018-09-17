@@ -1,16 +1,70 @@
 <!DOCTYPE html>
 <html>
-  <head>
-    <meta charset="utf-8">
-    <meta name=viewport content="width=device-width,initial-scale=1,maximum-scale=1,minimum-scale=1,user-scalable=no,minimal-ui">
-    <meta name="referrer" content="no-referrer">
-    <meta name="renderer" content="webkit">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1"/>
-    <title>vue mobile</title>
-  </head>
-  <body>
-    <div id="app">
-      
-    </div>
-  </body>
+
+<head>
+  <meta charset="utf-8">
+  <meta name=viewport content="width=device-width,initial-scale=1,maximum-scale=1,minimum-scale=1,user-scalable=no,minimal-ui">
+  <meta name="referrer" content="no-referrer">
+  <meta name="renderer" content="webkit">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1" />
+  <title>vue mobile</title>
+  <style>
+    .wamp a {
+      color: blue;
+      display: inline-block;
+      margin-right: 20px;
+      margin-top: 20px;
+    }
+  </style>
+</head>
+
+<body>
+  <div id="app"></div>
+  <div class="wamp">
+    <a class="api a">a.html</a>
+    <a class="api b">b.html</a>
+  </div>
+  <script>
+    document.querySelectorAll('.api').forEach((ele, index) => {
+      // 注册路由
+      ele.addEventListener('click', function (event) {
+        event.preventDefault();
+        let link = ele.textContent;
+        window.history.pushState({ name: 'api' }, link, link)
+      })
+      // 监听路由
+      window.addEventListener('popstate', function (event) {
+        event.preventDefault();
+        console.log({
+          location: location.href,
+          state: event.state
+        })
+      })
+    })
+  </script>
+  <h3>Hash</h3>
+  <div>
+    <a class="hash a">hasha.html</a>
+    <a class="hash b">hashb.html</a>
+  </div>
+  <script>
+    document.querySelectorAll('.hash').forEach((ele, index) => {
+      // 注册路由
+      ele.addEventListener('click', function (event) {
+        event.preventDefault();
+        let link = ele.textContent;
+        location.hash = link;
+      })
+      // 监听路由
+      window.addEventListener('hashchange', function (event) {
+        event.preventDefault();
+        console.log({
+          location: location.href,
+          hash: location.hash
+        })
+      })
+    })
+  </script>
+</body>
+
 </html>
