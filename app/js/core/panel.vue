@@ -10,22 +10,22 @@ export default {
     props: {
         cname: {
             type: String,
-            default: "",
+            default: ""
         },
         title: {
             type: String,
-            default: "",
+            default: ""
         },
     },
     data() {
         return {
-            panelClass: "panel",
+            panelClass: "panel"
         }
-    },
+    }
 }
 </script>
 
-<style lang="scss">
+<style lang="scss" scoped>
   @import "../../css/element.scss";
   .panel{
     @include panel;

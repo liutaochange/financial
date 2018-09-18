@@ -1,6 +1,6 @@
 <template lang="html">
     <div :class="[btnClass,cname]">
-        <slot/>
+        <slot></slot>
     </div>
 </template>
 
@@ -9,18 +9,18 @@ export default {
     props: {
         cname: {
             type: String,
-            default: "",
-        },
+            default: ""
+        }
     },
     data() {
         return {
-            btnClass: "btn",
+            btnClass: "btn"
         }
-    },
+    }
 }
 </script>
 
-<style lang="scss">
+<style lang="scss" scoped>
 @import "../../css/element.scss";
 .btn{
   @include btn;

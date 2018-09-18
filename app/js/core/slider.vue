@@ -16,12 +16,12 @@ import { swiper, swiperSlide } from "vue-awesome-swiper"
 export default {
     components: {
         swiper,
-        swiperSlide,
+        swiperSlide
     },
     props: {
         cname: {
             type: String,
-            default: "",
+            default: ""
         },
         options: {
             type: Object,
@@ -30,22 +30,20 @@ export default {
                     autoplay: true,
                     loop: true,
                     pagination: {
-                        el: ".swiper-pagination",
+                        el: ".swiper-pagination"
                     },
-                    notNextTick: false,
+                    notNextTick: false
                 }
-            },
+            }
         },
         items: {
             type: Array,
-            default() {
-                return []
-            },
-        },
-    },
+            default: () => []
+        }
+    }
 }
 </script>
 
-<style lang="css">
+<style lang="css" scoped>
   @import "~swiper/dist/css/swiper.css";
 </style>
