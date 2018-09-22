@@ -37,15 +37,14 @@ export default {
     }
     .btnDownload{
       float: right;
-      font-size: 24px;
+      font-size: 24px !important;
       border-width: 0;
       height: 56px;
-      line-height: 56px;
+      line-height: 56px !important;
       min-width: 120px;
-      padding: 0;
+      padding: 0 !important;
       border-radius: 4px;
       margin: 28px 24px 0 0;
     }
-
   }
 </style>
