@@ -36,46 +36,47 @@
 </template>
 
 <script>
-import Panel from "../core/panel.vue"
+import Panel from "../core/panel.vue";
 export default {
-    components: {
-        Panel,
-    },
-}
+  components: {
+    Panel
+  }
+};
 </script>
 
 <style lang="scss" module>
-  @import "../../css/element.scss";
-  .panel{
-    @include panel;
-    position: fixed;
-    left:0;
-    right: 0;
-    bottom: 0;
-    height: 100px;
-    margin: 0;
-    >h4{
-      display: none;
-    }
-    .content{
-      @include flex(row);
-      justify-content: space-around;
-      li{
-        text-align: center;
-        a{
-          text-decoration: none;
-        }
-        img{
-          width: 44px;
-          height: 44px;
-          display: inline-block;
-          margin: 12px auto 6px;
-        }
-        p{
-          font-size: 22px;
-          color: #656565;
-        }
+@import "../../css/element.scss";
+.panel {
+  @include panel;
+  position: fixed;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  height: 100px;
+  margin: 0 !important;
+  z-index: 100;
+  > h4 {
+    display: none;
+  }
+  .content {
+    @include flex(row);
+    justify-content: space-around;
+    li {
+      text-align: center;
+      a {
+        text-decoration: none;
+      }
+      img {
+        width: 44px;
+        height: 44px;
+        display: inline-block;
+        margin: 12px auto 6px;
+      }
+      p {
+        font-size: 22px;
+        color: #656565;
       }
     }
   }
+}
 </style>
